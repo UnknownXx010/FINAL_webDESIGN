@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struktur Organisasi - XoxoStar Community</title>
+
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e8f20b45.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: #fff;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+    .card-profile {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .card-profile:hover {
+      transform: scale(1.03);
+    }
+    .card-profile img {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      object-fit: cover;
+      height: 250px;
+      width: 100%;
+    }
+    .card-body {
+      background-color: #fff;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="beranda.html">XOXO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="program.html">Program Pendidikan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Anggota.html">Anggota</a>
+                </li>
+               
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tentang XOXO
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="tentangDropdown">
+                        <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+                        <li><a class="dropdown-item" href="visi dan misi.html">Visi & Misi</a></li>
+                        <li><a class="dropdown-item" href="struktur.html">Struktur Organisasi</a></li>
+                    </ul>
+                  </li> 
+                   <li class="nav-item">
+                    <a class="nav-link" href="KONTAK.html">Hubungi Kami</a>       
+            </ul>                   
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br>
+<br><br>
+
+  
+  <section class="container py-5">
+    <h2 class="text-center section-title mb-5" data-aos="fade-down">Struktur Organisasi</h2>
+    <div class="row g-4 justify-content-center">
+
+      
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card card-profile">
+          <img src="GAMBAR/athaaaaa.jpg" alt="Ketua">
+          <div class="card-body text-center">
+            <h5 class="card-title">Muhammad Atha Ghufran</h5>
+            <p class="card-text">Ketua Umum XoxoStar Community</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card card-profile">
+          <img src="GAMBAR/download.jpeg" alt="Wakil Ketua">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nama Wakil Ketua</h5>
+            <p class="card-text">Wakil Ketua XoxoStar Community</p>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card card-profile">
+          <img src="GAMBAR/download (1).jpeg " alt="Sekretaris">
+          <div class="card-body text-center">
+            <h5 class="card-title">Nama Sekretaris</h5>
+            <p class="card-text">Sekretaris XoxoStar Community</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

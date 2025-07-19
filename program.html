@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XOXOstarindonesia</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    section {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-primary:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease;
+    }
+    .navbar {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .dropdown-menu {
+      animation: dropdownFade 0.3s ease;
+    }
+    @keyframes dropdownFade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="beranda.html">XOXO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="program.html">Program Pendidikan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Anggota.html">Anggota</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tentang XOXO
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="tentangDropdown">
+              <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+              <li><a class="dropdown-item" href="visi dan misi.html">Visi & Misi</a></li>
+              <li><a class="dropdown-item" href="struktur.html">Struktur Organisasi</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="KONTAK.html">Hubungi Kami</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-5" style="padding-top: 80px;">
+    <div class="container">
+      <h1 class="mb-4 text-center">Program Pendidikan</h1>
+
+      <h2 class="mt-5">Program Unggulan</h2>
+      <ul>
+        <li><strong>Pelatihan Digital Marketing:</strong> Program intensif untuk meningkatkan kemampuan pemasaran digital anggota komunitas.</li>
+        <li><strong>Workshop Pengembangan Diri:</strong> Sesi interaktif yang fokus pada peningkatan soft skills dan leadership.</li>
+        <li><strong>Mentoring Karir:</strong> Pendampingan langsung dari para profesional untuk membantu perencanaan karir anggota.</li>
+      </ul>
+
+      <h2 class="mt-5">Jadwal Kegiatan</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Hari</th>
+            <th>Waktu</th>
+            <th>Kegiatan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Senin</td>
+            <td>18:00 - 20:00</td>
+            <td>Pelatihan Digital Marketing</td>
+          </tr>
+          <tr>
+            <td>Rabu</td>
+            <td>19:00 - 21:00</td>
+            <td>Workshop Pengembangan Diri</td>
+          </tr>
+          <tr>
+            <td>Jumat</td>
+            <td>17:00 - 19:00</td>
+            <td>Sesi Mentoring Karir</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="mt-5">Fasilitas</h2>
+      <ul>
+        <li>Ruang kelas yang nyaman dan dilengkapi dengan proyektor.</li>
+        <li>Perpustakaan dengan koleksi buku dan materi pembelajaran terbaru.</li>
+        <li>Akses internet cepat untuk mendukung kegiatan online dan riset.</li>
+        <li>Area diskusi dan ruang komunitas untuk kolaborasi antar anggota.</li>
+      </ul>
+
+      <h2 class="mt-5">Komentar</h2>
+      <form id="commentForm">
+        <div class="mb-3">
+          <label for="commentName" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="commentName" placeholder="Masukkan nama Anda" required />
+        </div>
+        <div class="mb-3">
+          <label for="commentEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="commentEmail" placeholder="Masukkan email Anda" required />
+        </div>
+        <div class="mb-3">
+          <label for="commentText" class="form-label">Komentar</label>
+          <textarea class="form-control" id="commentText" rows="4" placeholder="Tulis komentar Anda di sini..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim Komentar</button>
+      </form>
+
+      <div id="commentsSection" class="mt-4">
+        <h3>Komentar</h3>
+        <div id="commentsList" class="list-group"></div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="KONTAK.html" class="btn btn-primary btn-lg">HUBUNGI KAMI</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('commentForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('commentName').value.trim();
+      const email = document.getElementById('commentEmail').value.trim();
+      const comment = document.getElementById('commentText').value.trim();
+
+      if (name && email && comment) {
+        const commentsList = document.getElementById('commentsList');
+
+        const commentItem = document.createElement('div');
+        commentItem.classList.add('list-group-item');
+        commentItem.style.animation = 'fadeIn 0.5s ease';
+
+        const commentHeader = document.createElement('h5');
+        commentHeader.textContent = name;
+        commentItem.appendChild(commentHeader);
+
+        const commentEmail = document.createElement('small');
+        commentEmail.classList.add('text-muted');
+        commentEmail.textContent = email;
+        commentItem.appendChild(commentEmail);
+
+        const commentBody = document.createElement('p');
+        commentBody.textContent = comment;
+        commentItem.appendChild(commentBody);
+
+        commentsList.appendChild(commentItem);
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>

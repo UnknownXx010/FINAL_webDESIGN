@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>XOXOstarindonesia</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+        background-size: 600% 600%;
+        animation: gradientBG 15s ease infinite;
+        color: #00ffea;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      h1,
+      p {
+        text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7;
+      }
+
+      .btn-info {
+        background-color: #00fff7;
+        border: none;
+        color: #0f2027;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px #00fff7;
+      }
+
+      .btn-info:hover {
+        background-color: #00d9cc;
+        box-shadow: 0 0 20px #00d9cc;
+        color: #0f2027;
+      }
+
+      .btn-outline {
+        border: 2px solid #00fff7;
+        color: #00fff7;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px #00fff7;
+      }
+
+      .btn-outline:hover {
+        background-color: #00fff7;
+        color: #0f2027;
+        box-shadow: 0 0 20px #00fff7;
+      }
+    </style>
+    <style>
+      #music-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+      }
+      #background-audio {
+        display: none;
+      }
+    </style>
+    
+</head>
+
+
+<body>
+  <!-- Audio Musik Otomatis -->
+<div id="music-button">
+  <button onclick="toggleMute()" class="btn btn-outline-light btn-sm bg-primary">
+    🎵 Musik
+  </button>
+</div>
+
+<audio id="background-audio" autoplay loop>
+  <source src="musik/v4.www-y2mate.blog - ariana grande ft. future - everyday (sped up reverb) (320 KBps).mp3" type="audio/mpeg">
+  Browser Anda tidak mendukung pemutar audio.
+</audio>
+<script>
+  const audio = document.getElementById("background-audio");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    function startAudio() {
+      audio.play().catch(e => console.log("Autoplay diblokir:", e));
+      document.removeEventListener("click", startAudio);
+    }
+    document.addEventListener("click", startAudio);
+  });
+
+  function toggleMute() {
+    audio.muted = !audio.muted;
+  }
+</script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">XOXO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">Program Pendidikan</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Anggota.html">Anggota</a>
+                    </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Tentang XOXO
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="tentangDropdown">
+                    <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+                    <li><a class="dropdown-item" href="visi dan misi.html">Visi & Misi</a></li>
+                    <li><a class="dropdown-item" href="struktur.html">Struktur Organisasi</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="KONTAK.html">Hubungi Kami</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+    <section class="vh-100 d-flex align-items-center">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Teman Setia untuk Masa Depan.</h1>
+                    <p class="lead text-white animate__animated animate__fadeInUp animate__delay-1s">XOXOstar Hadir sebagai Lembaga Pendidikan dan menciptakan para pebisnis muda yang berkomitmen untuk mencetak generasi unggul dan siap menghadapi tantangan masa depan.</p>
+                    <div class="d-flex justify-content-center gap-3 mt-4 animate__animated animate__zoomIn animate__delay-2s">
+                        <a href="KONTAK.html" class="btn btn-info btn-lg">Hubungi Kami</a>
+                        <a href="program.html" class="btn btn-outline btn-lg">Program  XOXO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="mb-4 text-center">Tentang Kami</h2>
+            <p class="lead text-center mb-5">
+                XOXOstarindonesia berkomitmen untuk menciptakan generasi muda yang unggul melalui pendidikan dan pelatihan berkualitas. Kami menyediakan berbagai layanan yang mendukung pengembangan pribadi dan profesional anggota komunitas.
+            </p>
+
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <h3>Galeri Foto</h3>
+                    <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="GAMBAR/kerja 1.jpeg" class="d-block w-100" alt="Foto 1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="GAMBAR/kerja 2.jpeg" class="d-block w-100" alt="Foto 2" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="GAMBAR/kerja 3.jpeg" class="d-block w-100" alt="Foto 3" />
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>Video Informasi</h3>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="GAMBAR/v4.www-y2mate.blog - Pengembangan Model Kegiatan Wirausaha MBKM Berbasis Teknologi dan Digital (720p).mp4  " title="Video Informasi" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="mb-4 text-center animate__animated animate__fadeInDown">Layanan Utama</h2>
+            <div class="row g-4">
+                <div class="col-md-6 animate__animated animate__fadeInLeft animate__delay-1s">
+                    <h4>Pelatihan Bisnis untuk Remaja</h4>
+                    <p>Program pelatihan yang dirancang khusus untuk membantu remaja memahami dasar-dasar bisnis, mengembangkan keterampilan kewirausahaan, dan mempersiapkan mereka menjadi pebisnis muda yang sukses.</p>
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInRight animate__delay-2s">
+                    <h4>Kelas Pengembangan Diri</h4>
+                    <p>Kelas interaktif yang fokus pada peningkatan kemampuan pribadi seperti komunikasi, kepemimpinan, manajemen waktu, dan pengembangan karakter untuk mendukung kesuksesan pribadi dan profesional.</p>
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInLeft animate__delay-3s">
+                    <h4>Mentoring & Coaching</h4>
+                    <p>Sesi bimbingan dan pelatihan pribadi dengan para mentor berpengalaman yang membantu anggota komunitas mengatasi tantangan, merencanakan karir, dan mencapai tujuan mereka secara efektif.</p>
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInRight animate__delay-4s">
+                    <h4>Webinar Rutin bersama Praktisi</h4>
+                    <p>Webinar berkala yang menghadirkan praktisi dan ahli di berbagai bidang untuk berbagi pengetahuan, pengalaman, dan tips praktis yang dapat langsung diterapkan oleh peserta.</p>
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInLeft animate__delay-5s">
+                    <h4>Komunitas Kolaboratif Anak Muda</h4>
+                    <p>Platform kolaborasi yang memungkinkan anggota untuk berjejaring, berbagi ide, dan bekerja sama dalam proyek-proyek kreatif dan inovatif yang mendukung pengembangan diri dan bisnis.</p>
+                </div>
+                <div class="col-md-6 animate__animated animate__fadeInRight animate__delay-6s">
+                    <h4>Sertifikat Kompetensi</h4>
+                    <p>Sertifikat resmi yang diberikan kepada peserta yang telah menyelesaikan program pelatihan dan pembelajaran, sebagai bukti kompetensi dan peningkatan kemampuan yang diakui secara profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 MySite. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+</html>
+ 

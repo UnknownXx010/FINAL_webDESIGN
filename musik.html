@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Musik Otomatis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #music-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+    #background-audio {
+      display: none; /* Sembunyikan kontrol bawaan */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tombol Musik -->
+  <div id="music-button">
+    <button onclick="toggleMute()" class="btn btn-outline-light btn-sm bg-primary">
+      🎵 Musik
+    </button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="background-audio" autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung pemutar audio.
+  </audio>
+
+  <!-- JS untuk interaksi dan autoplay -->
+  <script>
+    const audio = document.getElementById("background-audio");
+
+    // Mainkan audio setelah interaksi pengguna
+    document.addEventListener("DOMContentLoaded", function () {
+      function startAudio() {
+        audio.play().catch(e => console.log("Autoplay diblokir:", e));
+        document.removeEventListener("click", startAudio);
+      }
+      document.addEventListener("click", startAudio);
+    });
+
+    // Fungsi mute/unmute
+    function toggleMute() {
+      audio.muted = !audio.muted;
+    }
+  </script>
+
+</body>
+</html>
